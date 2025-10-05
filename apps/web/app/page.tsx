@@ -1,12 +1,23 @@
-import { Button } from "@workspace/ui/components/button"
+import { Documentation } from "@/components/documentation";
+import { Endpoints } from "@/components/endpoints";
+import { Examples } from "@/components/examples";
+import { Features } from "@/components/features";
+import { Footer } from "@/components/footer";
+import { Header } from "@/components/header";
+import { Hero } from "@/components/hero";
 
-export default function Page() {
+export default function Home() {
   return (
-    <div className="flex items-center justify-center min-h-svh">
-      <div className="flex flex-col items-center justify-center gap-4">
-        <h1 className="text-2xl font-bold">Hello World</h1>
-        <Button size="sm">Button</Button>
-      </div>
+    <div className="min-h-screen">
+      <Header />
+      <main>
+        <Hero />
+        <Features />
+        <Documentation />
+        <Endpoints />
+        <Examples />
+      </main>
+      <Footer />
     </div>
-  )
+  );
 }

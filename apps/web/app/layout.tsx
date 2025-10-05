@@ -1,30 +1,30 @@
-import { Geist, Geist_Mono } from "next/font/google"
+import { Analytics } from "@vercel/analytics/next";
+import "@workspace/ui/globals.css";
+import { GeistMono } from "geist/font/mono";
+import { GeistSans } from "geist/font/sans";
+import type { Metadata } from "next";
+import type React from "react";
+import { Suspense } from "react";
 
-import "@workspace/ui/globals.css"
-import { Providers } from "@/components/providers"
-
-const fontSans = Geist({
-  subsets: ["latin"],
-  variable: "--font-sans",
-})
-
-const fontMono = Geist_Mono({
-  subsets: ["latin"],
-  variable: "--font-mono",
-})
+export const metadata: Metadata = {
+  title: "Urban Legends API - Professional Folklore Database",
+  description:
+    "Access thousands of urban legends, myths, and folklore stories through our comprehensive REST API. Free and open for developers.",
+  generator: "v0.app",
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className="dark">
       <body
-        className={`${fontSans.variable} ${fontMono.variable} font-sans antialiased `}
-      >
-        <Providers>{children}</Providers>
+        className={`font-sans ${GeistSans.variable} ${GeistMono.variable} antialiased max-w-7xl mx-auto`}>
+        <Suspense fallback={null}>{children}</Suspense>
+        <Analytics />
       </body>
     </html>
-  )
+  );
 }
