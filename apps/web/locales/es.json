@@ -1,0 +1,13 @@
+{
+  "sections": {
+    "hero": {
+      "badge": "API RESTful libre y abierta",
+      "title": "La base de datos de leyendas urbanas más completa",
+      "description": "Accede a miles de leyendas urbanas, mitos y relatos folclóricos de todo el mundo. Una API REST profesional creada para desarrolladores, investigadores y narradores.",
+      "actions": {
+        "getStarted": "Comenzar",
+        "viewApi": "Ver API"
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "sections": {
+    "hero": {
+      "badge": "Free & Open RESTful API",
+      "title": "The most comprehensive urban legends database",
+      "description": " Access thousands of urban legends, myths, and folklore stories from around the world. A professional REST API built for developers, researchers, and storytellers.",
+      "actions": {
+        "getStarted": "Get Started",
+        "viewApi": "View Api"
+      }
+    }
+  }
+}
