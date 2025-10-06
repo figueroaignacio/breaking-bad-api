@@ -1,15 +1,10 @@
-"use client";
+'use client';
 
-import { Button } from "@workspace/ui/components/button";
-import { Card } from "@workspace/ui/components/card";
-import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
-} from "@workspace/ui/components/tabs";
-import { Check, Copy } from "lucide-react";
-import { useState } from "react";
+import { Button } from '@workspace/ui/components/button';
+import { Card } from '@workspace/ui/components/card';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@workspace/ui/components/tabs';
+import { Check, Copy } from 'lucide-react';
+import { useState } from 'react';
 
 export function Documentation() {
   const [copied, setCopied] = useState(false);
@@ -21,15 +16,11 @@ export function Documentation() {
   };
 
   return (
-    <section
-      id="documentation"
-      className="container py-24 border-t border-border">
+    <section id="documentation" className="border-border container border-t py-24">
       <div className="mx-auto max-w-6xl">
         <div className="mb-16 text-center">
-          <h2 className="mb-4 text-4xl font-bold tracking-tight">
-            Quick Start Guide
-          </h2>
-          <p className="text-lg text-muted-foreground text-balance">
+          <h2 className="mb-4 text-4xl font-bold tracking-tight">Quick Start Guide</h2>
+          <p className="text-muted-foreground text-balance text-lg">
             Get up and running in minutes with our simple REST API
           </p>
         </div>
@@ -44,8 +35,8 @@ export function Documentation() {
 
             <TabsContent value="javascript" className="mt-6">
               <div className="relative">
-                <pre className="rounded-lg bg-muted p-6 overflow-x-auto">
-                  <code className="text-sm font-mono text-foreground">{`// Fetch a random urban legend
+                <pre className="bg-muted overflow-x-auto rounded-lg p-6">
+                  <code className="text-foreground font-mono text-sm">{`// Fetch a random urban legend
 fetch('https://api.urbanlegends.dev/v1/legends/random')
   .then(response => response.json())
   .then(data => {
@@ -58,7 +49,7 @@ fetch('https://api.urbanlegends.dev/v1/legends/random')
                 <Button
                   size="icon"
                   variant="ghost"
-                  className="absolute top-4 right-4"
+                  className="absolute right-4 top-4"
                   onClick={() =>
                     copyToClipboard(`fetch('https://api.urbanlegends.dev/v1/legends/random')
   .then(response => response.json())
@@ -68,20 +59,17 @@ fetch('https://api.urbanlegends.dev/v1/legends/random')
     console.log(data.origin);
   })
   .catch(error => console.error('Error:', error));`)
-                  }>
-                  {copied ? (
-                    <Check className="h-4 w-4" />
-                  ) : (
-                    <Copy className="h-4 w-4" />
-                  )}
+                  }
+                >
+                  {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
                 </Button>
               </div>
             </TabsContent>
 
             <TabsContent value="python" className="mt-6">
               <div className="relative">
-                <pre className="rounded-lg bg-muted p-6 overflow-x-auto">
-                  <code className="text-sm font-mono text-foreground">{`import requests
+                <pre className="bg-muted overflow-x-auto rounded-lg p-6">
+                  <code className="text-foreground font-mono text-sm">{`import requests
 
 # Fetch a random urban legend
 response = requests.get('https://api.urbanlegends.dev/v1/legends/random')
@@ -94,7 +82,7 @@ print(data['origin'])`}</code>
                 <Button
                   size="icon"
                   variant="ghost"
-                  className="absolute top-4 right-4"
+                  className="absolute right-4 top-4"
                   onClick={() =>
                     copyToClipboard(`import requests
 
@@ -104,36 +92,30 @@ data = response.json()
 print(data['title'])
 print(data['story'])
 print(data['origin'])`)
-                  }>
-                  {copied ? (
-                    <Check className="h-4 w-4" />
-                  ) : (
-                    <Copy className="h-4 w-4" />
-                  )}
+                  }
+                >
+                  {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
                 </Button>
               </div>
             </TabsContent>
 
             <TabsContent value="curl" className="mt-6">
               <div className="relative">
-                <pre className="rounded-lg bg-muted p-6 overflow-x-auto">
-                  <code className="text-sm font-mono text-foreground">{`curl -X GET "https://api.urbanlegends.dev/v1/legends/random" \\
+                <pre className="bg-muted overflow-x-auto rounded-lg p-6">
+                  <code className="text-foreground font-mono text-sm">{`curl -X GET "https://api.urbanlegends.dev/v1/legends/random" \\
      -H "Accept: application/json"`}</code>
                 </pre>
                 <Button
                   size="icon"
                   variant="ghost"
-                  className="absolute top-4 right-4"
+                  className="absolute right-4 top-4"
                   onClick={() =>
                     copyToClipboard(
-                      `curl -X GET "https://api.urbanlegends.dev/v1/legends/random" -H "Accept: application/json"`
+                      `curl -X GET "https://api.urbanlegends.dev/v1/legends/random" -H "Accept: application/json"`,
                     )
-                  }>
-                  {copied ? (
-                    <Check className="h-4 w-4" />
-                  ) : (
-                    <Copy className="h-4 w-4" />
-                  )}
+                  }
+                >
+                  {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
                 </Button>
               </div>
             </TabsContent>

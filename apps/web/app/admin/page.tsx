@@ -55,15 +55,15 @@ export default function AdminPage() {
   };
 
   return (
-    <div className="min-h-screen bg-neutral-950 text-neutral-100 flex items-center justify-center py-16 px-4">
+    <div className="flex min-h-screen items-center justify-center bg-neutral-950 px-4 py-16 text-neutral-100">
       <form
         onSubmit={handleSubmit}
-        className="w-full max-w-2xl bg-neutral-900 rounded-2xl shadow-lg p-8 space-y-6 border border-neutral-800"
+        className="w-full max-w-2xl space-y-6 rounded-2xl border border-neutral-800 bg-neutral-900 p-8 shadow-lg"
       >
-        <h1 className="text-2xl font-semibold text-center mb-8">Agregar nueva leyenda</h1>
+        <h1 className="mb-8 text-center text-2xl font-semibold">Agregar nueva leyenda</h1>
 
         <div>
-          <label className="block text-sm mb-2 text-neutral-400">Slug</label>
+          <label className="mb-2 block text-sm text-neutral-400">Slug</label>
           <input
             placeholder="la-llorona"
             value={form.slug}
@@ -73,7 +73,7 @@ export default function AdminPage() {
         </div>
 
         <div>
-          <label className="block text-sm mb-2 text-neutral-400">Región</label>
+          <label className="mb-2 block text-sm text-neutral-400">Región</label>
           <select
             value={form.regionId}
             onChange={(e) => setForm({ ...form, regionId: e.target.value })}
@@ -91,7 +91,7 @@ export default function AdminPage() {
         </div>
 
         <div>
-          <label className="block text-sm mb-2 text-neutral-400">Categoría</label>
+          <label className="mb-2 block text-sm text-neutral-400">Categoría</label>
           <select
             value={form.categorySlug}
             onChange={(e) => setForm({ ...form, categorySlug: e.target.value })}
@@ -112,12 +112,12 @@ export default function AdminPage() {
           {form.translations.map((t, i) => (
             <div
               key={i}
-              className="border border-neutral-800 rounded-xl p-6 bg-neutral-900/70 space-y-4"
+              className="space-y-4 rounded-xl border border-neutral-800 bg-neutral-900/70 p-6"
             >
-              <h4 className="font-medium text-lg text-indigo-400 uppercase">{t.languageCode}</h4>
+              <h4 className="text-lg font-medium uppercase text-indigo-400">{t.languageCode}</h4>
 
               <div>
-                <label className="block text-sm mb-2 text-neutral-400">Nombre</label>
+                <label className="mb-2 block text-sm text-neutral-400">Nombre</label>
                 <input
                   placeholder="Nombre de la leyenda"
                   value={t.name}
@@ -131,7 +131,7 @@ export default function AdminPage() {
               </div>
 
               <div>
-                <label className="block text-sm mb-2 text-neutral-400">Descripción</label>
+                <label className="mb-2 block text-sm text-neutral-400">Descripción</label>
                 <textarea
                   placeholder="Descripción de la leyenda"
                   value={t.description}
@@ -140,7 +140,7 @@ export default function AdminPage() {
                     copy[i].description = e.target.value;
                     setForm({ ...form, translations: copy });
                   }}
-                  className="w-full min-h-[100px] rounded-lg bg-neutral-800 px-4 py-2 text-neutral-100 placeholder:text-neutral-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 resize-none"
+                  className="min-h-[100px] w-full resize-none rounded-lg bg-neutral-800 px-4 py-2 text-neutral-100 placeholder:text-neutral-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
                 />
               </div>
             </div>
@@ -149,7 +149,7 @@ export default function AdminPage() {
 
         <button
           type="submit"
-          className="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-3 rounded-lg transition-all duration-150"
+          className="w-full rounded-lg bg-indigo-600 py-3 font-semibold text-white transition-all duration-150 hover:bg-indigo-500"
         >
           Guardar leyenda
         </button>

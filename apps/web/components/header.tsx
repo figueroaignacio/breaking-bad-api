@@ -1,31 +1,34 @@
-import { Button } from "@workspace/ui/components/button";
-import { BookOpen, Github } from "lucide-react";
+import { Button } from '@workspace/ui/components/button';
+import { BookOpen, Github } from 'lucide-react';
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="border-border/40 bg-background/95 supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50 w-full border-b backdrop-blur">
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-2">
-          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary">
-            <BookOpen className="h-5 w-5 text-primary-foreground" />
+          <div className="bg-primary flex h-9 w-9 items-center justify-center rounded-lg">
+            <BookOpen className="text-primary-foreground h-5 w-5" />
           </div>
           <span className="text-xl font-bold">Urban Legends API</span>
         </div>
 
-        <nav className="hidden md:flex items-center gap-6">
+        <nav className="hidden items-center gap-6 md:flex">
           <a
             href="#documentation"
-            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+            className="text-muted-foreground hover:text-foreground text-sm font-medium transition-colors"
+          >
             Documentation
           </a>
           <a
             href="#endpoints"
-            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+            className="text-muted-foreground hover:text-foreground text-sm font-medium transition-colors"
+          >
             Endpoints
           </a>
           <a
             href="#examples"
-            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+            className="text-muted-foreground hover:text-foreground text-sm font-medium transition-colors"
+          >
             Examples
           </a>
         </nav>

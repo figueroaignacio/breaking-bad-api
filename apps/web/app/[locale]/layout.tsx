@@ -44,7 +44,7 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
   return (
     <html lang="en" className="dark">
       <body
-        className={`font-sans ${GeistSans.variable} ${GeistMono.variable} antialiased max-w-7xl mx-auto`}
+        className={`font-sans ${GeistSans.variable} ${GeistMono.variable} mx-auto max-w-7xl antialiased`}
       >
         <Suspense fallback={null}>{children}</Suspense>
         <Analytics />
