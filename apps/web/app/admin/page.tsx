@@ -3,10 +3,24 @@
 import { useEffect, useState } from 'react';
 
 export default function AdminPage() {
-  const [regions, setRegions] = useState<{ id: number; name: string }[]>([]);
+  const [regions, setRegions] = useState<
+    {
+      id: number;
+      slug: string;
+      translations: { languageCode: string; name: string }[];
+    }[]
+  >([]);
+  const [categories, setCategories] = useState<
+    {
+      id: number;
+      slug: string;
+      translations: { languageCode: string; name: string }[];
+    }[]
+  >([]);
   const [form, setForm] = useState({
     slug: '',
     regionId: '',
+    categorySlug: '',
     translations: [
       { languageCode: 'es', name: '', description: '' },
       { languageCode: 'en', name: '', description: '' },
@@ -14,9 +28,14 @@ export default function AdminPage() {
   });
 
   useEffect(() => {
-    fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/v1/regions`)
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/v1/regions?lang=es`)
       .then((res) => res.json())
       .then(setRegions)
+      .catch(console.error);
+
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/v1/categories?lang=es`)
+      .then((res) => res.json())
+      .then(setCategories)
       .catch(console.error);
   }, []);
 
@@ -53,7 +72,6 @@ export default function AdminPage() {
           />
         </div>
 
-        {/* Región */}
         <div>
           <label className="block text-sm mb-2 text-neutral-400">Región</label>
           <select
@@ -65,14 +83,31 @@ export default function AdminPage() {
               Seleccioná una región
             </option>
             {regions.map((r) => (
-              <option key={r.id} value={r.id}>
-                {r.name}
+              <option key={r.id} value={r.slug}>
+                {r.translations[0]?.name}
               </option>
             ))}
           </select>
         </div>
 
-        {/* Traducciones */}
+        <div>
+          <label className="block text-sm mb-2 text-neutral-400">Categoría</label>
+          <select
+            value={form.categorySlug}
+            onChange={(e) => setForm({ ...form, categorySlug: e.target.value })}
+            className="w-full rounded-lg bg-neutral-800 px-4 py-2 text-neutral-100 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          >
+            <option value="" disabled>
+              Seleccioná una categoría
+            </option>
+            {categories.map((c) => (
+              <option key={c.id} value={c.slug}>
+                {c.translations[0]?.name}
+              </option>
+            ))}
+          </select>
+        </div>
+
         <div className="space-y-8">
           {form.translations.map((t, i) => (
             <div
@@ -112,7 +147,6 @@ export default function AdminPage() {
           ))}
         </div>
 
-        {/* Botón */}
         <button
           type="submit"
           className="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-3 rounded-lg transition-all duration-150"

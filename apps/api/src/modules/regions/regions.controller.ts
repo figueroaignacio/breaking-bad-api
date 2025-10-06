@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Param, ParseIntPipe, Post } from '@nestjs/common';
+import { Body, Controller, Get, Param, ParseIntPipe, Post, Query } from '@nestjs/common';
 import { RegionService } from './regions.service';
 
 @Controller('regions')
@@ -6,13 +6,19 @@ export class RegionController {
   constructor(private readonly regionService: RegionService) {}
 
   @Post()
-  create(@Body('name') name: string, @Body('slug') slug: string) {
-    return this.regionService.create(name, slug);
+  create(
+    @Body()
+    data: {
+      slug: string;
+      translations: { languageCode: string; name: string; slug: string }[];
+    },
+  ) {
+    return this.regionService.create(data.slug, data.translations);
   }
 
   @Get()
-  findAll() {
-    return this.regionService.findAll();
+  findAll(@Query('lang') lang?: string) {
+    return this.regionService.findAll(lang);
   }
 
   @Get(':id')
