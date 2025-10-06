@@ -1,5 +1,5 @@
 import { Body, Controller, Get, Param, ParseIntPipe, Post, Query } from '@nestjs/common';
-import { RegionService } from './regions.service';
+import { RegionService } from './region.service';
 
 @Controller('regions')
 export class RegionController {

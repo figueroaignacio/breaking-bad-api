@@ -1,6 +1,6 @@
 import { Module, OnApplicationBootstrap } from '@nestjs/common';
-import { RegionController } from './regions.controller';
-import { RegionService } from './regions.service';
+import { RegionController } from './region.controller';
+import { RegionService } from './region.service';
 
 @Module({
   providers: [RegionService],
