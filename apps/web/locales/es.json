@@ -9,5 +9,24 @@
         "viewApi": "Ver API"
       }
     }
+  },
+  "components": {
+    "header": {
+      "logo": "API de Leyendas Urbanas",
+      "navigation": [
+        {
+          "label": "Documentación",
+          "href": "#documentation"
+        },
+        {
+          "label": "Endpoints",
+          "href": "#endpoints"
+        },
+        {
+          "label": "Ejemplos",
+          "href": "#examples"
+        }
+      ]
+    }
   }
 }

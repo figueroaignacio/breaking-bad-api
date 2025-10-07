@@ -9,5 +9,24 @@
         "viewApi": "View Api"
       }
     }
+  },
+  "components": {
+    "header": {
+      "logo": "Urban Legends API",
+      "navigation": [
+        {
+          "label": "Docs",
+          "href": "#documentation"
+        },
+        {
+          "label": "Endpoints",
+          "href": "#endpoints"
+        },
+        {
+          "label": "Examples",
+          "href": "#examples"
+        }
+      ]
+    }
   }
 }
