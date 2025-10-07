@@ -8,8 +8,7 @@ import { notFound } from 'next/navigation';
 import '@workspace/ui/globals.css';
 
 // Fonts
-import { GeistMono } from 'geist/font/mono';
-import { GeistSans } from 'geist/font/sans';
+import { geist } from '@/lib/fonts';
 
 // Next and React
 import { Analytics } from '@vercel/analytics/next';
@@ -43,9 +42,7 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
 
   return (
     <html lang="en" className="dark">
-      <body
-        className={`font-sans ${GeistSans.variable} ${GeistMono.variable} mx-auto max-w-7xl antialiased`}
-      >
+      <body className={`font-sans ${geist.className} mx-auto max-w-7xl antialiased`}>
         <Suspense fallback={null}>{children}</Suspense>
         <Analytics />
       </body>
