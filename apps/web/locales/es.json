@@ -8,6 +8,24 @@
         "getStarted": "Comenzar",
         "viewApi": "Ver API"
       }
+    },
+    "overview": {
+      "title": "Resumen de la API",
+      "description": "Accede a datos completos sobre las Leyendas Urbanas a través de nuestros endpoints RESTful.",
+      "items": [
+        {
+          "title": "Leyendas Urbanas",
+          "description": "Descubre información detallada sobre fascinantes leyendas urbanas de todo el mundo."
+        },
+        {
+          "title": "Regiones",
+          "description": "Explora leyendas por región y conoce sus orígenes culturales únicos."
+        },
+        {
+          "title": "Categorías",
+          "description": "Explora leyendas organizadas por categoría para una navegación más fácil y una mejor experiencia de descubrimiento."
+        }
+      ]
     }
   },
   "components": {

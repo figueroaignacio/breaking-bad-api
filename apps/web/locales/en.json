@@ -8,6 +8,24 @@
         "getStarted": "Get Started",
         "viewApi": "View Api"
       }
+    },
+    "overview": {
+      "title": "API Overview",
+      "description": "Access comprehensive data about Urban Legends through our RESTful API endpoints.",
+      "items": [
+        {
+          "title": "Urban Legends",
+          "description": "Discover detailed information about fascinating urban legends from around the world."
+        },
+        {
+          "title": "Regions",
+          "description": "Browse legends by region and explore their unique cultural origins."
+        },
+        {
+          "title": "Categories",
+          "description": "Explore legends organized by category for easier navigation and discovery."
+        }
+      ]
     }
   },
   "components": {

@@ -6,10 +6,10 @@ import { use } from 'react';
 import { Documentation } from '@/components/documentation';
 import { Endpoints } from '@/components/endpoints';
 import { Examples } from '@/components/examples';
-import { Features } from '@/components/features';
 import { Footer } from '@/components/footer';
 import { Header } from '@/components/header';
 import { Hero } from '@/components/hero';
+import { Overview } from '@/components/overview';
 
 interface HomePageProps {
   params: Promise<{ locale: string }>;
@@ -24,7 +24,7 @@ export default function Home({ params }: HomePageProps) {
       <Header />
       <main>
         <Hero />
-        <Features />
+        <Overview />
         <Documentation />
         <Endpoints />
         <Examples />
