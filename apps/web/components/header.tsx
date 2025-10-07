@@ -3,6 +3,7 @@ import { useTranslations } from 'next-intl';
 
 // Components
 import { BookOpen } from 'lucide-react';
+import { ModeToggle } from './mode-toggle';
 
 interface Navigation {
   label: string;
@@ -32,6 +33,7 @@ export function Header() {
               {item.label}
             </a>
           ))}
+          <ModeToggle />
         </nav>
       </div>
     </header>

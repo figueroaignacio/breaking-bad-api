@@ -1,10 +1,17 @@
+// Components
+import { ThemeProvider } from '@/components/theme-provider';
+
+// Styles
 import '@workspace/ui/globals.css';
-import type React from 'react';
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return children;
+  return (
+    <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+      {children}
+    </ThemeProvider>
+  );
 }
