@@ -26,6 +26,10 @@
           "description": "Explora leyendas organizadas por categoría para una navegación más fácil y una mejor experiencia de descubrimiento."
         }
       ]
+    },
+    "docs": {
+      "title": "Documentación de la API",
+      "description": "Comienza a explorar leyendas urbanas en minutos con nuestra potente y sencilla API RESTful."
     }
   },
   "components": {

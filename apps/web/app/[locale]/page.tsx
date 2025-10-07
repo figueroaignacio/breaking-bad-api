@@ -3,7 +3,7 @@ import { setRequestLocale } from 'next-intl/server';
 import { use } from 'react';
 
 // Components
-import { Documentation } from '@/components/documentation';
+import { Documentation } from '@/components/docs/documentation';
 import { Endpoints } from '@/components/endpoints';
 import { Examples } from '@/components/examples';
 import { Footer } from '@/components/footer';

@@ -26,6 +26,10 @@
           "description": "Explore legends organized by category for easier navigation and discovery."
         }
       ]
+    },
+    "docs": {
+      "title": "API Documentation",
+      "description": "Start exploring urban legends in minutes with our powerful and easy-to-use RESTful API."
     }
   },
   "components": {
