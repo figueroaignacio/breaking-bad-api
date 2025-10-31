@@ -2,6 +2,7 @@
 import { ValidationPipe } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
+import { apiReference } from '@scalar/nestjs-api-reference';
 
 // Modules
 import { AppModule } from './app.module';
@@ -29,17 +30,32 @@ async function bootstrap() {
     .build();
 
   const document = SwaggerModule.createDocument(app, config);
-  SwaggerModule.setup('docs', app, document, {
-    customSiteTitle: 'Breaking Bad API Docs',
-    customfavIcon: 'https://breakingbadapi.com/favicon.ico',
-    customCss: '.swagger-ui .topbar { display: none }',
+
+  app.getHttpAdapter().get('/openapi.json', (req, res) => {
+    res.json(document);
   });
 
+  app.use(
+    '/docs',
+    apiReference({
+      theme: 'pruple',
+      layout: 'modern',
+      favicon: 'https://breakingbadapi.com/favicon.ico',
+      title: 'Breaking Bad API Reference',
+      servers: [{ description: 'Local API' }],
+      meta: {
+        description: 'Interactive API reference for Breaking Bad API',
+      },
+      url: '/openapi.json',
+    }),
+  );
+
+  // Start server
   const port = process.env.PORT || 3000;
   await app.listen(port);
 
   console.log(`🚀 Application is running on: http://localhost:${port}/api`);
-  console.log(`📚 Swagger docs available at: http://localhost:${port}/docs`);
+  console.log(`📘 Scalar docs available at: http://localhost:${port}/docs`);
   console.log(`🧪 Breaking Bad API ready to serve!`);
 }
 
