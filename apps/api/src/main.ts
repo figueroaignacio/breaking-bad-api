@@ -1,6 +1,9 @@
+// Nest
 import { ValidationPipe } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
+
+// Modules
 import { AppModule } from './app.module';
 
 async function bootstrap() {
@@ -18,9 +21,7 @@ async function bootstrap() {
 
   const config = new DocumentBuilder()
     .setTitle('Breaking Bad API')
-    .setDescription(
-      'The Breaking Bad API - Characters, Episodes, Quotes and more',
-    )
+    .setDescription('The Breaking Bad API - Characters, Episodes, Quotes and more')
     .setVersion('1.0')
     .addTag('characters', 'Character endpoints')
     .addTag('episodes', 'Episode endpoints')
