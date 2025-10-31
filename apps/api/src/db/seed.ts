@@ -15,22 +15,25 @@ async function seed() {
   console.log('🌱 Seeding database...');
 
   try {
+    // 🧩 Inicializar conexión
     await AppDataSource.initialize();
     console.log('📦 Database connected');
 
+    const queryRunner = AppDataSource.createQueryRunner();
+
+    // 🗑️ Limpiar datos previos con TRUNCATE CASCADE
+    console.log('🗑️  Clearing existing data...');
+    await queryRunner.query(`
+      TRUNCATE TABLE deaths, quotes, episodes, characters RESTART IDENTITY CASCADE;
+    `);
+
+    // Repos
     const characterRepo = AppDataSource.getRepository(Character);
     const episodeRepo = AppDataSource.getRepository(Episode);
     const quoteRepo = AppDataSource.getRepository(Quote);
     const deathRepo = AppDataSource.getRepository(Death);
 
-    // Clear existing data
-    console.log('🗑️  Clearing existing data...');
-    await deathRepo.delete({});
-    await quoteRepo.delete({});
-    await episodeRepo.delete({});
-    await characterRepo.delete({});
-
-    // Seed Characters
+    // 👥 Seed Characters
     console.log('👥 Adding characters...');
     const walter = characterRepo.create({
       name: 'Walter White',
@@ -130,7 +133,7 @@ async function seed() {
 
     await characterRepo.save([walter, jesse, skyler, hank, saul, gus, mike]);
 
-    // Seed Episodes
+    // 📺 Seed Episodes
     console.log('📺 Adding episodes...');
     const episode1 = episodeRepo.create({
       title: 'Pilot',
@@ -160,7 +163,7 @@ async function seed() {
 
     await episodeRepo.save([episode1, episode2]);
 
-    // Seed Quotes
+    // 💬 Seed Quotes
     console.log('💬 Adding quotes...');
     const quote1 = quoteRepo.create({
       quote: 'I am not in danger, Skyler. I AM the danger!',
@@ -196,7 +199,7 @@ async function seed() {
 
     await quoteRepo.save([quote1, quote2, quote3, quote4, quote5]);
 
-    // Seed Deaths
+    // 💀 Seed Deaths
     console.log('💀 Adding deaths...');
     const death1 = deathRepo.create({
       victimId: gus.id,
