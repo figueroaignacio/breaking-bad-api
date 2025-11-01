@@ -1,0 +1,227 @@
+[
+  {
+    "victim_name": "Emilio Koyama",
+    "killer_name": "Walter White",
+    "method": "Phosphine gas poisoning",
+    "episode_season": 1,
+    "episode_number": 1,
+    "circumstances": "Walt's first kill using chemistry in the RV",
+    "brutality_level": 7
+  },
+  {
+    "victim_name": "Krazy-8",
+    "killer_name": "Walter White",
+    "method": "Strangulation with bike lock",
+    "episode_season": 1,
+    "episode_number": 3,
+    "circumstances": "Walt kills Krazy-8 in self-defense in Jesse's basement",
+    "brutality_level": 8
+  },
+  {
+    "victim_name": "Tuco Salamanca",
+    "killer_name": "Hank Schrader",
+    "method": "Gunshot",
+    "episode_season": 2,
+    "episode_number": 2,
+    "circumstances": "Hank shoots Tuco during a shootout in the desert",
+    "brutality_level": 6
+  },
+  {
+    "victim_name": "Jane Margolis",
+    "killer_name": "Walter White",
+    "method": "Asphyxiation on vomit (allowed to die)",
+    "episode_season": 2,
+    "episode_number": 12,
+    "circumstances": "Walt watches Jane choke on her vomit and doesn't intervene",
+    "brutality_level": 7
+  },
+  {
+    "victim_name": "Combo",
+    "killer_name": "Tomas Cantillo",
+    "method": "Gunshot",
+    "episode_season": 2,
+    "episode_number": 11,
+    "circumstances": "Shot by a child working for rival dealers",
+    "brutality_level": 5
+  },
+  {
+    "victim_name": "Donald Margolis",
+    "killer_name": null,
+    "method": "Suicide by gunshot",
+    "episode_season": 2,
+    "episode_number": 13,
+    "circumstances": "Jane's father commits suicide after causing plane crash",
+    "brutality_level": 6
+  },
+  {
+    "victim_name": "Tortuga",
+    "killer_name": "The Cousins",
+    "method": "Decapitation",
+    "episode_season": 2,
+    "episode_number": 7,
+    "circumstances": "Beheaded by the cartel for being a DEA informant",
+    "brutality_level": 10
+  },
+  {
+    "victim_name": "Leonel Salamanca",
+    "killer_name": "Mike Ehrmantraut",
+    "method": "Lethal injection",
+    "episode_season": 3,
+    "episode_number": 8,
+    "circumstances": "Mike injects air into his IV at Gus's order",
+    "brutality_level": 5
+  },
+  {
+    "victim_name": "Marco Salamanca",
+    "killer_name": "Hank Schrader",
+    "method": "Gunshot to the head",
+    "episode_season": 3,
+    "episode_number": 7,
+    "circumstances": "Hank shoots Marco during an assassination attempt",
+    "brutality_level": 7
+  },
+  {
+    "victim_name": "Tomas Cantillo",
+    "killer_name": "Rival dealers",
+    "method": "Gunshot",
+    "episode_season": 3,
+    "episode_number": 12,
+    "circumstances": "Child dealer killed by his own employers",
+    "brutality_level": 8
+  },
+  {
+    "victim_name": "Gale Boetticher",
+    "killer_name": "Jesse Pinkman",
+    "method": "Gunshot to the face",
+    "episode_season": 3,
+    "episode_number": 13,
+    "circumstances": "Jesse shoots Gale to save Walt's life",
+    "brutality_level": 8
+  },
+  {
+    "victim_name": "Victor",
+    "killer_name": "Gustavo Fring",
+    "method": "Throat slit with box cutter",
+    "episode_season": 4,
+    "episode_number": 1,
+    "circumstances": "Gus kills Victor to send a message to Walt and Jesse",
+    "brutality_level": 10
+  },
+  {
+    "victim_name": "Gustavo Fring",
+    "killer_name": "Walter White",
+    "method": "Pipe bomb explosion",
+    "episode_season": 4,
+    "episode_number": 13,
+    "circumstances": "Walt uses Hector's wheelchair bomb to kill Gus",
+    "brutality_level": 10
+  },
+  {
+    "victim_name": "Hector Salamanca",
+    "killer_name": "Walter White",
+    "method": "Pipe bomb explosion (suicide bomber)",
+    "episode_season": 4,
+    "episode_number": 13,
+    "circumstances": "Hector dies in the explosion that kills Gus",
+    "brutality_level": 10
+  },
+  {
+    "victim_name": "Tyrus Kitt",
+    "killer_name": "Walter White",
+    "method": "Pipe bomb explosion",
+    "episode_season": 4,
+    "episode_number": 13,
+    "circumstances": "Tyrus dies in the explosion at Casa Tranquila",
+    "brutality_level": 9
+  },
+  {
+    "victim_name": "Mike Ehrmantraut",
+    "killer_name": "Walter White",
+    "method": "Gunshot",
+    "episode_season": 5,
+    "episode_number": 7,
+    "circumstances": "Walt shoots Mike in a fit of rage by the river",
+    "brutality_level": 7
+  },
+  {
+    "victim_name": "Drew Sharp",
+    "killer_name": "Todd Alquist",
+    "method": "Gunshot",
+    "episode_season": 5,
+    "episode_number": 5,
+    "circumstances": "Todd shoots a child witness after the train heist",
+    "brutality_level": 10
+  },
+  {
+    "victim_name": "Declan",
+    "killer_name": "Jack Welker's Gang",
+    "method": "Gunshot",
+    "episode_season": 5,
+    "episode_number": 8,
+    "circumstances": "Killed during Jack's takeover of his operation",
+    "brutality_level": 7
+  },
+  {
+    "victim_name": "Steven Gomez",
+    "killer_name": "Jack Welker's Gang",
+    "method": "Gunshot",
+    "episode_season": 5,
+    "episode_number": 14,
+    "circumstances": "Killed in the shootout in the desert with Hank",
+    "brutality_level": 7
+  },
+  {
+    "victim_name": "Hank Schrader",
+    "killer_name": "Jack Welker",
+    "method": "Gunshot to the head",
+    "episode_season": 5,
+    "episode_number": 14,
+    "circumstances": "Executed by Jack despite Walt's pleas",
+    "brutality_level": 9
+  },
+  {
+    "victim_name": "Andrea Cantillo",
+    "killer_name": "Todd Alquist",
+    "method": "Gunshot to the head",
+    "episode_season": 5,
+    "episode_number": 15,
+    "circumstances": "Todd kills Andrea in front of Jesse as punishment",
+    "brutality_level": 10
+  },
+  {
+    "victim_name": "Jack Welker",
+    "killer_name": "Walter White",
+    "method": "Gunshot",
+    "episode_season": 5,
+    "episode_number": 16,
+    "circumstances": "Walt shoots Jack mid-sentence during the finale",
+    "brutality_level": 6
+  },
+  {
+    "victim_name": "Todd Alquist",
+    "killer_name": "Jesse Pinkman",
+    "method": "Strangulation with chains",
+    "episode_season": 5,
+    "episode_number": 16,
+    "circumstances": "Jesse strangles Todd to death with his chains",
+    "brutality_level": 8
+  },
+  {
+    "victim_name": "Lydia Rodarte-Quayle",
+    "killer_name": "Walter White",
+    "method": "Ricin poisoning",
+    "episode_season": 5,
+    "episode_number": 16,
+    "circumstances": "Walt poisons Lydia's stevia with ricin",
+    "brutality_level": 7
+  },
+  {
+    "victim_name": "Walter White",
+    "killer_name": null,
+    "method": "Gunshot wound complications",
+    "episode_season": 5,
+    "episode_number": 16,
+    "circumstances": "Walt dies from a gunshot wound sustained during the finale shootout",
+    "brutality_level": 5
+  }
+]
