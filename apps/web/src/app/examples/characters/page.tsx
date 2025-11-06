@@ -1,5 +1,5 @@
 import { CharacterCard } from '@/components/character-card';
-import Logo from '@/components/logo';
+import { Logo } from '@/components/logo';
 import type { Character } from '@/lib/definitions';
 
 async function getCharacters() {

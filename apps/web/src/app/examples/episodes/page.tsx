@@ -1,5 +1,5 @@
 import { EpisodeCard } from '@/components/episode-card';
-import Logo from '@/components/logo';
+import { Logo } from '@/components/logo';
 import type { Episode } from '@/lib/definitions';
 
 async function getEpisodes() {

@@ -1,4 +1,4 @@
-import Logo from '@/components/logo';
+import { Logo } from '@/components/logo';
 import { QuoteCard } from '@/components/quote-card';
 import type { Quote } from '@/lib/definitions';
 

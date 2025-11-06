@@ -2,7 +2,7 @@ interface BreakingBadLogoProps {
   className?: string;
 }
 
-export function BreakingBadLogo({ className = '' }: BreakingBadLogoProps) {
+export function Logo({ className = '' }: BreakingBadLogoProps) {
   return (
     <div
       className={`flex flex-col items-start justify-center font-serif text-[#1b3b2a] ${className}`}
